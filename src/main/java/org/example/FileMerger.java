@@ -60,3 +60,21 @@ public class FileMerger {
         }
         return list;
     }
+
+    /**
+     * Writes a list of integers to a file.
+     *
+     * @param list the list of integers to write
+     * @param fileName the name of the file to write to
+     * @throws IOException if an I/O error occurs
+     */
+    private static void writeIntegersToFile(List<Integer> list, String fileName) throws IOException {
+        // Use try-with-resources to ensure the writer is closed after use
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName))) {
+            for (Integer num : list) {
+                bw.write(num.toString());
+                bw.newLine();
+            }
+        }
+    }
+}
