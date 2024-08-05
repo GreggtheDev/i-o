@@ -30,3 +30,13 @@ public class FileMerger {
                     commonSet.add(num);
                 }
             }
+
+            // Write common integers to common.txt
+            writeIntegersToFile(new ArrayList<>(commonSet), "common.txt");
+
+        } catch (IOException e) {
+            System.err.println("IOException occurred: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.err.println("NumberFormatException occurred: " + e.getMessage());
+        }
+    }
