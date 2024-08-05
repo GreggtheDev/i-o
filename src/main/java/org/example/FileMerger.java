@@ -40,3 +40,23 @@ public class FileMerger {
             System.err.println("NumberFormatException occurred: " + e.getMessage());
         }
     }
+
+    /**
+     * Reads integers from a file and returns them as a list.
+     *
+     * @param fileName the name of the file to read from
+     * @return a list of integers read from the file
+     * @throws IOException if an I/O error occurs
+     * @throws NumberFormatException if a line does not contain a valid integer
+     */
+    private static List<Integer> readIntegersFromFile(String fileName) throws IOException {
+        List<Integer> list = new ArrayList<>();
+        // Use try-with-resources to ensure the reader is closed after use
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                list.add(Integer.parseInt(line.trim()));
+            }
+        }
+        return list;
+    }
