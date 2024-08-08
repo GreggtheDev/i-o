@@ -27,7 +27,7 @@ This Java program reads integers from two text files (`input1.txt` and `input2.t
    javac FileMerger.java
 Run the Program:
 
-sh
+
 Copy code
 java FileMerger
 Output Files:
