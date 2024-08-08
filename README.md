@@ -25,58 +25,7 @@ This Java program reads integers from two text files (`input1.txt` and `input2.t
 2. **Compile the Program**:
    ```sh
    javac FileMerger.java
-Run the Program:
 
-
-Copy code
-java FileMerger
-Output Files:
-
-merged.txt: Contains all integers from both input files, maintaining the original order.
-common.txt: Contains integers present in both input files.
-Error Handling
-The program handles the following exceptions:
-FileNotFoundException: If an input file is not found.
-IOException: If an I/O error occurs during file operations.
-NumberFormatException: If a line in the input file does not contain a valid integer.
-Example
-Input Files
-input1.txt
-
-Copy code
-1
-3
-5
-7
-9
-input2.txt
-
-Copy code
-2
-3
-5
-8
-10
-Output Files
-merged.txt
-
-Copy code
-1
-3
-5
-7
-9
-2
-3
-5
-8
-10
-common.txt
-
-Copy code
-3
-5
-Notes
 Ensure that the input files are in the same directory as the FileMerger.java file, or provide the full path to the input files in the code.
 The program assumes that the input files contain one integer per line.
 License
